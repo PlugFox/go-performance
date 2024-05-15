@@ -6,23 +6,32 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "main.go",
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "go:get"
+            "program": "main.go",
+            "args": [],
+            "env": {},
+            "buildFlags": "",
+            "preLaunchTask": "go:get",
         },
         {
             "name": "[go] Launch current file",
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${file}"
+            "program": "${file}",
+            "args": [],
+            "env": {},
+            "buildFlags": ""
         },
         {
             "name": "[go] Test",
             "type": "go",
             "request": "launch",
             "mode": "test",
-            "program": "${workspaceFolder}"
+            "program": "${workspaceFolder}",
+            "args": [],
+            "env": {},
+            "buildFlags": ""
         },
         {
             "name": "[go] Benchmark",
@@ -38,14 +47,16 @@
                 //"-test.memprofile=mem.out",
                 "-test.count",
                 "3"
-            ]
+            ],
+            "env": {},
+            "buildFlags": ""
         },
         {
             "name": "[go] Attach",
             "type": "go",
             "request": "attach",
             "mode": "local",
-            "processId": "${command:pickProcess}"
+            "processId": "${command:pickProcess}",
         }
     ]
 }

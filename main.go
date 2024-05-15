@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 )
 
 // Fizz Buzz
@@ -18,6 +19,7 @@ func fizzBuzz(i int) string {
 }
 
 func main() {
+	runtime.SetBlockProfileRate(1)
 	for i := 1; i <= 1000; i++ {
 		fmt.Println(fizzBuzz(i))
 	}

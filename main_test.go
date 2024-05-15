@@ -4,6 +4,7 @@ import (
 	"testing"
 )
 
+// Test FizzBuzz
 func TestFizzBuzz(t *testing.T) {
 	// Fizz Buzz
 	if fizzBuzz(3) != "Fizz" {
@@ -26,4 +27,11 @@ func TestFizzBuzz(t *testing.T) {
 		t.Error("Expected 2, got ", fizzBuzz(2))
 	}
 
+}
+
+// Benchmark FizzBuzz
+func BenchmarkFizzBuzz(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		fizzBuzz(i)
+	}
 }

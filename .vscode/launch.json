@@ -18,11 +18,27 @@
             "program": "${file}"
         },
         {
-            "name": "[go] Launch test",
+            "name": "[go] Test",
             "type": "go",
             "request": "launch",
             "mode": "test",
-            "program": "${file}"
+            "program": "${workspaceFolder}"
+        },
+        {
+            "name": "[go] Benchmark",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}",
+            "args": [
+                "-test.bench=.",
+                // "-test.benchmem",
+                //"-test.benchtime=3s",
+                //"-test.cpuprofile=cpu.out",
+                //"-test.memprofile=mem.out",
+                "-test.count",
+                "3"
+            ]
         },
         {
             "name": "[go] Attach",

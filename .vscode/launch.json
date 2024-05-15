@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "[go] Launch package",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "main.go",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "go:get"
+        },
+        {
+            "name": "[go] Launch current file",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${file}"
+        },
+        {
+            "name": "[go] Launch test",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${file}"
+        },
+        {
+            "name": "[go] Attach",
+            "type": "go",
+            "request": "attach",
+            "mode": "local",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}

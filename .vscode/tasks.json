@@ -1,0 +1,53 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "go:get",
+            "detail": "Get dependencies",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {}
+            },
+            "type": "shell",
+            "command": "go",
+            "args": [
+                "get",
+                "./..."
+            ],
+            "isBackground": false,
+            "group": {
+                "kind": "none",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "go:tests",
+            "detail": "Run tests",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {}
+            },
+            "type": "shell",
+            "command": "go",
+            "args": [
+                "test",
+                "./..."
+            ],
+            "isBackground": false,
+            "group": {
+                "kind": "none",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+  "[go]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off",
+    "editor.selectionHighlight": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    },
+    "editor.links": true,
+    "editor.rulers": [
+      80
+    ],
+  },
+  "search.exclude": {
+    "go.mod": true,
+    "build": true
+  },
+  "files.watcherExclude": {
+    "go.mod": true,
+    "build": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "go.mod": "go.sum",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+    "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
+    "*.go": "$(capture)_test.go"
+  }
+  /* "files.associations": {
+    "*.drift": "sql"
+  }, */
+}
